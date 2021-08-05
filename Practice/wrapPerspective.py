@@ -25,6 +25,9 @@ pts2 = np.float32([
 print(pts1.shape)
 print(pts2.shape)
 
+# for x in range(0,4):
+#     cv2.circle(img=img, center=(int(pts1[x][0]),int(pts1[x][1])), radius=5,color=(0,0,255), thickness=cv2.FILLED)
+
 # Parameters:
 # ->src: Coordinates of quadrangle vertices in the source image.
 # ->dst: Coordinates of the corresponding quadrangle vertices in the destination image.

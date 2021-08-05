@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-# Read the orginal image
+# Read the original image
 img = cv2.imread(filename="image_example/cards.jpg")
 
 pts1 = np.float32([

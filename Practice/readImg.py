@@ -11,5 +11,3 @@ print('Width of Image: ', int(img.shape[1]), 'pixels')
 cv2.imshow(winname="Elephant Picture", mat=img)
 cv2.waitKey()
 cv2.destroyAllWindows()
-
-
