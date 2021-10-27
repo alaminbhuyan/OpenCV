@@ -17,5 +17,6 @@ cv2.line(img=myimg, pt1=(100,270),pt2=(100,150), color=(255,255,255),thickness=2
 cv2.line(img=myimg, pt1=(260,270),pt2=(260,150), color=(255,255,255),thickness=2)
 
 
+
 cv2.imshow("output",myimg)
 cv2.waitKey()

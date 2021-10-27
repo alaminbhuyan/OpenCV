@@ -2,7 +2,11 @@ import numpy as np
 import cv2
 
 # At first read the image
-img = cv2.imread(filename="image_example/lena.png")
+# img = cv2.imread(filename="image_example/lena.png")
+img = cv2.imread(filename="image_example/img2.jpg")
+
+# resize image
+img = cv2.resize(src=img, dsize=(400,400))
 
 # Initialize the kernel
 kernel = np.ones((5,5), np.uint8)
