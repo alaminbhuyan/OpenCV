@@ -66,7 +66,8 @@ def main():
                     fontScale=2, color=(0, 255, 0), thickness=2)
         img_resize = cv2.resize(src=img, dsize=(width, height))
         cv2.imshow("My img", img_resize)
-        cv2.waitKey(1)
+		if cv2.waitKey(1) & 0xFF == ord("q"):
+			break
 
 
 if __name__ == '__main__':
