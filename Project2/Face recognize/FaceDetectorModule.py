@@ -2,12 +2,12 @@ import cv2
 import mediapipe as mp
 import time
 
+
 class FaceDetector:
     def __init__(self, minDetectionConfidence=0.5):
         self.minDetectionConfidence = minDetectionConfidence
         self.faceDetection = mp.solutions.face_detection.FaceDetection(self.minDetectionConfidence)
         self.mpDraw = mp.solutions.drawing_utils
-
 
     def findFaces(self, img, draw=True):
         imgRGB = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2RGB)
@@ -43,9 +43,10 @@ class FaceDetector:
         cv2.line(img=img, pt1=(x, y1), pt2=(x + l, y1), color=(255, 0, 255), thickness=thickness)
         cv2.line(img=img, pt1=(x, y1), pt2=(x, y1 - l), color=(255, 0, 255), thickness=thickness)
         # Bottom Right  x1,y1
-        cv2.line(img=img, pt1=(x1, y1),pt2= (x1 - l, y1), color=(255, 0, 255), thickness=thickness)
-        cv2.line(img=img, pt1=(x1, y1),pt2= (x1, y1 - l), color=(255, 0, 255), thickness=thickness)
+        cv2.line(img=img, pt1=(x1, y1), pt2=(x1 - l, y1), color=(255, 0, 255), thickness=thickness)
+        cv2.line(img=img, pt1=(x1, y1), pt2=(x1, y1 - l), color=(255, 0, 255), thickness=thickness)
         return img
+
 
 def main(x):
     # capture_video = cv2.VideoCapture("Videos/video3.mp4")
@@ -62,10 +63,11 @@ def main(x):
         fps = 1 / (cTime - pTime)
         pTime = cTime
         cv2.putText(img=img, text=f"FPS: {int(fps)}", org=(35, 70), fontFace=cv2.FONT_HERSHEY_PLAIN,
-                    fontScale=2,color=(0, 255, 0),thickness=2)
+                    fontScale=2, color=(0, 255, 0), thickness=2)
         img_resize = cv2.resize(src=img, dsize=(width, height))
         cv2.imshow("My img", img_resize)
         cv2.waitKey(1)
+
 
 if __name__ == '__main__':
     main(x="Videos/video3.mp4")
