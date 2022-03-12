@@ -50,7 +50,9 @@ cv2.circle(img=myimg, center=(500,100), radius=50, color=(0,255,255), thickness=
 # fontScale: Font scale factor that is multiplied by the font-specific base size.
 # color: It is the color of text string to be drawn. For BGR, we pass a tuple. eg: (255, 0, 0) for blue color.
 # thickness: It is the thickness of the line in px.
-# lineType: This is an optional parameter.It gives the type of the line to be used.
+# lineType: This is an optional parameter.It gives the type of the line to be used. Type of line, whether 8-connected, anti-aliased line etc.
+# By default, it is 8-connected. cv.LINE_AA gives anti-aliased line which looks great for curves.
+# cv::FILLED = -1, cv::LINE_4 = 4, cv::LINE_8 = 8, cv::LINE_AA = 16
 # bottomLeftOrigin: This is an optional parameter.
 # When it is true, the image data origin is at the bottom-left corner. Otherwise, it is at the top-left corner.
 
