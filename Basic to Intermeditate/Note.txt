@@ -1,0 +1,16 @@
+
+# Learn OpenCV from geeksforgeeks
+
+1) Working with Images
+
+	a) Getting Started -- Some operations.ipynb
+	b) Image Processing -- Image Processing.ipynb
+	c) Feature Detection and Description
+	d) Drawing Functions -- Drawing Functions.ipynb
+
+2) Working with Videos
+
+	a) Getting Started
+	b) Video Processing
+
+3) Applications and Projects -- Applications and Projects.ipynb
